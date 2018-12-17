@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Final
 {
-    class FrogMovement
+    public class FrogMovement
     { 
+
     }
 }
