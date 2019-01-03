@@ -18,17 +18,17 @@ namespace Final
             KeyDown += new KeyEventHandler(GameBoard_KeyDown);
         }
 
-            void GameBoard_KeyDown(object sender, KeyEventArgs e)
-            {
-                int x = pictureBox1.Location.X;
-                int y = pictureBox1.Location.Y;
+        void GameBoard_KeyDown(object sender, KeyEventArgs e)
+        {
+            int x = pictureBox1.Location.X;
+            int y = pictureBox1.Location.Y;
 
-                if (e.KeyCode == Keys.Right) x += 10;
-                else if (e.KeyCode == Keys.Left) x -= 10;
-                else if (e.KeyCode == Keys.Up) y -= 10;
-                else if (e.KeyCode == Keys.Down) y += 10;
+            if (e.KeyCode == Keys.Right) x += 10;
+            else if (e.KeyCode == Keys.Left) x -= 10;
+            else if (e.KeyCode == Keys.Up) y -= 10;
+            else if (e.KeyCode == Keys.Down) y += 10;
 
-                pictureBox1.Location = new Point(x, y);
-            }
+            pictureBox1.Location = new Point(x, y);
+        }
     }
 }
