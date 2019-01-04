@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,13 +20,10 @@ namespace Final
 
             MoveTimer.Interval = 100;
             MoveTimer.Start();
-
-            CollisionTimer.Interval = 100;
-            CollisionTimer.Start();
         }
 
-       void GameBoard_KeyDown(object sender, KeyEventArgs e)
-        {
+            void GameBoard_KeyDown(object sender, KeyEventArgs e)
+            {
                 int x = Frog.Location.X;
                 int y = Frog.Location.Y;
 
@@ -36,7 +33,7 @@ namespace Final
                 else if (e.KeyCode == Keys.Down) y += 10;
 
                 Frog.Location = new Point(x, y);
-        }
+            }
 
         private void GameBoard_Load(object sender, EventArgs e)
         {
@@ -50,13 +47,10 @@ namespace Final
             Car3.Location = new Point(Car3.Location.X + 10, Car3.Location.Y);
             Car4.Location = new Point(Car4.Location.X - 10, Car4.Location.Y);
             Car5.Location = new Point(Car5.Location.X + 10, Car5.Location.Y);
-        }
 
-        private void CollisionTimer_Tick(object sender, EventArgs e)
-        {
             if (Car1.Bounds.IntersectsWith(Lane1End.Bounds))
             {
-                Car1.Left = 12;
+                Car1.Left = 12; 
             }
 
             if (Car2.Bounds.IntersectsWith(Lane2End.Bounds))
@@ -79,5 +73,6 @@ namespace Final
                 Car5.Left = 12;
             }
         }
+
     }
 }
