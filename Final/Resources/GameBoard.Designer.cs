@@ -92,7 +92,6 @@
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.Car5 = new System.Windows.Forms.PictureBox();
             this.Lane5End = new System.Windows.Forms.PictureBox();
-            this.CollisionTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).BeginInit();
@@ -769,10 +768,6 @@
             this.Lane5End.TabIndex = 63;
             this.Lane5End.TabStop = false;
             // 
-            // CollisionTimer
-            // 
-            this.CollisionTimer.Tick += new System.EventHandler(this.CollisionTimer_Tick);
-            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -971,7 +966,6 @@
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.PictureBox Car5;
         private System.Windows.Forms.PictureBox Lane5End;
-        private System.Windows.Forms.Timer CollisionTimer;
     }
 }
 
