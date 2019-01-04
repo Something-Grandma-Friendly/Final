@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,8 +25,8 @@ namespace Final
             CollisionTimer.Start();
         }
 
-            void GameBoard_KeyDown(object sender, KeyEventArgs e)
-            {
+       void GameBoard_KeyDown(object sender, KeyEventArgs e)
+        {
                 int x = Frog.Location.X;
                 int y = Frog.Location.Y;
 
@@ -36,7 +36,7 @@ namespace Final
                 else if (e.KeyCode == Keys.Down) y += 10;
 
                 Frog.Location = new Point(x, y);
-            }
+        }
 
         private void GameBoard_Load(object sender, EventArgs e)
         {
