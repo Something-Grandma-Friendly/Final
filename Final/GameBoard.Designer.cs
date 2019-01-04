@@ -93,6 +93,12 @@
             this.Car5 = new System.Windows.Forms.PictureBox();
             this.Lane5End = new System.Windows.Forms.PictureBox();
             this.CollisionTimer = new System.Windows.Forms.Timer(this.components);
+            this.Log1 = new System.Windows.Forms.PictureBox();
+            this.Log2 = new System.Windows.Forms.PictureBox();
+            this.River1End = new System.Windows.Forms.PictureBox();
+            this.River2End = new System.Windows.Forms.PictureBox();
+            this.CountdownTimer = new System.Windows.Forms.Timer(this.components);
+            this.lblCountdown = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).BeginInit();
@@ -154,6 +160,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane5End)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Log1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Log2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.River1End)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.River2End)).BeginInit();
             this.SuspendLayout();
             // 
             // MoveTimer
@@ -164,18 +174,18 @@
             // 
             this.Frog.BackgroundImage = global::Final.Properties.Resources.Frog;
             this.Frog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Frog.Location = new System.Drawing.Point(424, 475);
+            this.Frog.Location = new System.Drawing.Point(423, 453);
             this.Frog.Name = "Frog";
-            this.Frog.Size = new System.Drawing.Size(45, 44);
+            this.Frog.Size = new System.Drawing.Size(41, 37);
             this.Frog.TabIndex = 0;
             this.Frog.TabStop = false;
             // 
             // River1
             // 
             this.River1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.River1.Location = new System.Drawing.Point(-3, 56);
+            this.River1.Location = new System.Drawing.Point(-3, 49);
             this.River1.Name = "River1";
-            this.River1.Size = new System.Drawing.Size(880, 61);
+            this.River1.Size = new System.Drawing.Size(880, 74);
             this.River1.TabIndex = 3;
             this.River1.TabStop = false;
             // 
@@ -573,7 +583,7 @@
             // 
             this.pictureBox19.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.pictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox19.Location = new System.Drawing.Point(458, 265);
+            this.pictureBox19.Location = new System.Drawing.Point(468, 265);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(32, 10);
             this.pictureBox19.TabIndex = 44;
@@ -703,7 +713,7 @@
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.pictureBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox30.Location = new System.Drawing.Point(458, 208);
+            this.pictureBox30.Location = new System.Drawing.Point(468, 208);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(32, 10);
             this.pictureBox30.TabIndex = 57;
@@ -773,20 +783,71 @@
             // 
             this.CollisionTimer.Tick += new System.EventHandler(this.CollisionTimer_Tick);
             // 
+            // Log1
+            // 
+            this.Log1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Log1.BackgroundImage")));
+            this.Log1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Log1.Location = new System.Drawing.Point(-2, 85);
+            this.Log1.Name = "Log1";
+            this.Log1.Size = new System.Drawing.Size(86, 38);
+            this.Log1.TabIndex = 64;
+            this.Log1.TabStop = false;
+            // 
+            // Log2
+            // 
+            this.Log2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Log2.BackgroundImage")));
+            this.Log2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Log2.Location = new System.Drawing.Point(791, 49);
+            this.Log2.Name = "Log2";
+            this.Log2.Size = new System.Drawing.Size(86, 38);
+            this.Log2.TabIndex = 65;
+            this.Log2.TabStop = false;
+            // 
+            // River1End
+            // 
+            this.River1End.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.River1End.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.River1End.Location = new System.Drawing.Point(867, 89);
+            this.River1End.Name = "River1End";
+            this.River1End.Size = new System.Drawing.Size(10, 34);
+            this.River1End.TabIndex = 66;
+            this.River1End.TabStop = false;
+            // 
+            // River2End
+            // 
+            this.River2End.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.River2End.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.River2End.Location = new System.Drawing.Point(-2, 49);
+            this.River2End.Name = "River2End";
+            this.River2End.Size = new System.Drawing.Size(10, 30);
+            this.River2End.TabIndex = 67;
+            this.River2End.TabStop = false;
+            // 
+            // CountdownTimer
+            // 
+            this.CountdownTimer.Interval = 1000;
+            this.CountdownTimer.Tick += new System.EventHandler(this.CountdownTimer_Tick);
+            // 
+            // lblCountdown
+            // 
+            this.lblCountdown.Location = new System.Drawing.Point(47, 9);
+            this.lblCountdown.Name = "lblCountdown";
+            this.lblCountdown.Size = new System.Drawing.Size(122, 35);
+            this.lblCountdown.TabIndex = 68;
+            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(876, 518);
+            this.Controls.Add(this.lblCountdown);
             this.Controls.Add(this.Lane5End);
             this.Controls.Add(this.Car5);
-            this.Controls.Add(this.Lane4End);
             this.Controls.Add(this.Car4);
             this.Controls.Add(this.Car3);
             this.Controls.Add(this.Lane3End);
             this.Controls.Add(this.Car2);
-            this.Controls.Add(this.Lane2End);
             this.Controls.Add(this.Lane1End);
             this.Controls.Add(this.Car1);
             this.Controls.Add(this.Frog);
@@ -802,7 +863,6 @@
             this.Controls.Add(this.Hash10);
             this.Controls.Add(this.Hash11);
             this.Controls.Add(this.Lane1);
-            this.Controls.Add(this.River1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
@@ -840,6 +900,13 @@
             this.Controls.Add(this.pictureBox34);
             this.Controls.Add(this.Lane4);
             this.Controls.Add(this.Lane5);
+            this.Controls.Add(this.Lane4End);
+            this.Controls.Add(this.Lane2End);
+            this.Controls.Add(this.Log1);
+            this.Controls.Add(this.Log2);
+            this.Controls.Add(this.River2End);
+            this.Controls.Add(this.River1End);
+            this.Controls.Add(this.River1);
             this.Name = "GameBoard";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.GameBoard_Load);
@@ -904,6 +971,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane5End)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Log1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Log2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.River1End)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.River2End)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -972,6 +1043,12 @@
         private System.Windows.Forms.PictureBox Car5;
         private System.Windows.Forms.PictureBox Lane5End;
         private System.Windows.Forms.Timer CollisionTimer;
+        private System.Windows.Forms.PictureBox Log1;
+        private System.Windows.Forms.PictureBox Log2;
+        private System.Windows.Forms.PictureBox River1End;
+        private System.Windows.Forms.PictureBox River2End;
+        private System.Windows.Forms.Timer CountdownTimer;
+        private System.Windows.Forms.Label lblCountdown;
     }
 }
 
