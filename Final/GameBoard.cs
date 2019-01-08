@@ -14,20 +14,19 @@ namespace Final
     {
         public int frogLives = 3;
         public int score = 0;
-        public int scoreMultiplier = 1;
-        public int speedMultiplier = 1;
 
 
-        public GameBoard()
+        public GameBoard(int speed)
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(GameBoard_KeyDown);
 
-            MoveTimer.Interval = 100;
+            MoveTimer.Interval = 100 / speed;
             MoveTimer.Start();
 
             CollisionTimer.Interval = 100;
             CollisionTimer.Start();
+            int speedMultiplier = speed;
         }
 
         void GameBoard_KeyDown(object sender, KeyEventArgs e)
@@ -45,14 +44,14 @@ namespace Final
 
         private void MoveTimer_Tick(object sender, EventArgs e)
         {
-            Car1.Location = new Point(Car1.Location.X + 10 * speedMultiplier, Car1.Location.Y);
-            Car2.Location = new Point(Car2.Location.X - 10 * speedMultiplier, Car2.Location.Y);
-            Car3.Location = new Point(Car3.Location.X + 10 * speedMultiplier, Car3.Location.Y);
-            Car4.Location = new Point(Car4.Location.X - 10 * speedMultiplier, Car4.Location.Y);
-            Car5.Location = new Point(Car5.Location.X + 10 * speedMultiplier, Car5.Location.Y);
+            Car1.Location = new Point(Car1.Location.X + 10, Car1.Location.Y);
+            Car2.Location = new Point(Car2.Location.X - 10, Car2.Location.Y);
+            Car3.Location = new Point(Car3.Location.X + 10, Car3.Location.Y);
+            Car4.Location = new Point(Car4.Location.X - 10, Car4.Location.Y);
+            Car5.Location = new Point(Car5.Location.X + 10, Car5.Location.Y);
 
-            Log1.Location = new Point(Log1.Location.X + 10 * speedMultiplier, Log1.Location.Y);
-            Log2.Location = new Point(Log2.Location.X - 10 * speedMultiplier, Log2.Location.Y);
+            Log1.Location = new Point(Log1.Location.X + 10, Log1.Location.Y);
+            Log2.Location = new Point(Log2.Location.X - 10, Log2.Location.Y);
         }
 
         private void CollisionTimer_Tick(object sender, EventArgs e)
@@ -137,7 +136,7 @@ namespace Final
                 }
                 if (Frog.Bounds.IntersectsWith(endZone.Bounds))
                 {
-                    score = score + (scoreMultiplier * 100);
+                    score = score + (1 * 100);
                     Frog.Top = 453;
                     Frog.Left = 420;
                 }

@@ -98,7 +98,7 @@
             this.River1End = new System.Windows.Forms.PictureBox();
             this.River2End = new System.Windows.Forms.PictureBox();
             this.CountdownTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblCountdown = new System.Windows.Forms.Label();
+            this.endZone = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).BeginInit();
@@ -164,6 +164,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Log2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1End)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River2End)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endZone)).BeginInit();
             this.SuspendLayout();
             // 
             // MoveTimer
@@ -828,12 +829,13 @@
             this.CountdownTimer.Interval = 1000;
             this.CountdownTimer.Tick += new System.EventHandler(this.CountdownTimer_Tick);
             // 
-            // lblCountdown
+            // endZone
             // 
-            this.lblCountdown.Location = new System.Drawing.Point(47, 9);
-            this.lblCountdown.Name = "lblCountdown";
-            this.lblCountdown.Size = new System.Drawing.Size(122, 35);
-            this.lblCountdown.TabIndex = 68;
+            this.endZone.Location = new System.Drawing.Point(-2, 0);
+            this.endZone.Name = "endZone";
+            this.endZone.Size = new System.Drawing.Size(880, 29);
+            this.endZone.TabIndex = 68;
+            this.endZone.TabStop = false;
             // 
             // GameBoard
             // 
@@ -841,7 +843,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(876, 518);
-            this.Controls.Add(this.lblCountdown);
+            this.Controls.Add(this.endZone);
             this.Controls.Add(this.Lane5End);
             this.Controls.Add(this.Car5);
             this.Controls.Add(this.Car4);
@@ -909,7 +911,6 @@
             this.Controls.Add(this.River1);
             this.Name = "GameBoard";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.GameBoard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).EndInit();
@@ -975,6 +976,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Log2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1End)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.River2End)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endZone)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1048,7 +1050,7 @@
         private System.Windows.Forms.PictureBox River1End;
         private System.Windows.Forms.PictureBox River2End;
         private System.Windows.Forms.Timer CountdownTimer;
-        private System.Windows.Forms.Label lblCountdown;
+        private System.Windows.Forms.PictureBox endZone;
     }
 }
 
