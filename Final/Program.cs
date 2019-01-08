@@ -17,6 +17,7 @@ namespace Final
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new GameBoard());
+            Application.Run(new StartScreen());
         }
     }
 }
