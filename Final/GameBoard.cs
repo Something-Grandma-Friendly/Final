@@ -15,8 +15,9 @@ namespace Final
         public int frogLives = 3;
         public int score = 0;
 
+        public int speed { get; set; }
 
-        public GameBoard(int speed)
+        public GameBoard()
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(GameBoard_KeyDown);

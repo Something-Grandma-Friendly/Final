@@ -13,10 +13,19 @@ namespace Final
     public partial class StartScreen : Form
     {
 
-        public int lives = 3;
-        int easy = 1;
-        int medium = 2;
-        int high = 3;
+        private int speed;
+        public int Speed
+        {
+            get
+            {
+                return speed;
+            }
+            set
+            {
+                speed = Speed;
+            }
+        }
+
         public StartScreen()
         {
             InitializeComponent();
@@ -24,8 +33,8 @@ namespace Final
 
         private void btnWeak_Click(object sender, EventArgs e)
         {
-            
-            GameBoard myForm = new GameBoard(easy);
+            Speed = 1;
+            GameBoard myForm = new GameBoard();
             this.Hide();
             myForm.ShowDialog();
             this.Show();
@@ -33,7 +42,8 @@ namespace Final
 
         private void btnRespectable_Click(object sender, EventArgs e)
         {
-            GameBoard myForm = new GameBoard(medium);
+            Speed = 2;
+            GameBoard myForm = new GameBoard();
             this.Hide();
             myForm.ShowDialog();
             this.Show();
@@ -41,10 +51,11 @@ namespace Final
 
         private void btnBeast_Click(object sender, EventArgs e)
         {
-            GameBoard myForm = new GameBoard(high);
+            Speed = 3;
+            GameBoard myForm = new GameBoard();
             this.Hide();
             myForm.ShowDialog();
             this.Show();
         }
-    }
+}
 }
