@@ -69,7 +69,7 @@
             this.btnBeast.Name = "btnBeast";
             this.btnBeast.Size = new System.Drawing.Size(133, 23);
             this.btnBeast.TabIndex = 2;
-            this.btnBeast.Text = "You\'re a BEAST";
+            this.btnBeast.Text = "Ludicrous Speed";
             this.btnBeast.UseVisualStyleBackColor = false;
             this.btnBeast.Click += new System.EventHandler(this.btnBeast_Click);
             // 
