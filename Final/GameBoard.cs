@@ -15,9 +15,9 @@ namespace Final
         public int frogLives = 3;
         public int score = 0;
 
-        public int speed { get; set; }
+        public int speed;
 
-        public GameBoard()
+        public GameBoard(int speed)
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(GameBoard_KeyDown);
@@ -25,7 +25,7 @@ namespace Final
             MoveTimer.Interval = 100 / speed;
             MoveTimer.Start();
 
-            CollisionTimer.Interval = 100;
+            CollisionTimer.Interval = 100 / speed;
             CollisionTimer.Start();
             int speedMultiplier = speed;
         }
@@ -145,7 +145,7 @@ namespace Final
 
 
         }
-        public void GameEvents()
+        public void ()
         {
 
         }
