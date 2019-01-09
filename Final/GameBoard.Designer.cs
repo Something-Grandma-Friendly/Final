@@ -827,7 +827,6 @@
             // CountdownTimer
             // 
             this.CountdownTimer.Interval = 1000;
-            this.CountdownTimer.Tick += new System.EventHandler(this.CountdownTimer_Tick);
             // 
             // endZone
             // 

@@ -145,15 +145,7 @@ namespace Final
 
 
         }
-        public void ()
-        {
-
-        }
 
 
-        private void CountdownTimer_Tick(object sender, EventArgs e)
-        {
-
-        }
     }
 }
