@@ -148,7 +148,7 @@ namespace Final
             {
                 frogLives = 3;
                 EndScreen endScreen = new EndScreen();
-                this.Hide();
+                this.Close();
                 endScreen.ShowDialog();
                 this.Show();
             }
@@ -156,4 +156,5 @@ namespace Final
         }
 
     }
+
 }

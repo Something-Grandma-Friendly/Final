@@ -24,7 +24,7 @@ namespace Final
         {
             speed = 1;
             GameBoard myForm = new GameBoard(speed);
-            this.Hide();
+            this.Close();
             myForm.ShowDialog();
             this.Show();
         }
@@ -33,7 +33,7 @@ namespace Final
         {
             speed = 5;
             GameBoard myForm = new GameBoard(speed);
-            this.Hide();
+            this.Close();
             myForm.ShowDialog();
             this.Show();
         }
@@ -42,7 +42,7 @@ namespace Final
         {
             speed = 10;
             GameBoard myForm = new GameBoard(speed);
-            this.Hide();
+            this.Close();
             myForm.ShowDialog();
             this.Show();
         }

@@ -842,7 +842,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(876, 518);
-            this.Controls.Add(this.endZone);
             this.Controls.Add(this.Lane5End);
             this.Controls.Add(this.Car5);
             this.Controls.Add(this.Car4);
@@ -908,6 +907,7 @@
             this.Controls.Add(this.River2End);
             this.Controls.Add(this.River1End);
             this.Controls.Add(this.River1);
+            this.Controls.Add(this.endZone);
             this.Name = "GameBoard";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).EndInit();
