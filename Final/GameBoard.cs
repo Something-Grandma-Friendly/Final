@@ -28,6 +28,7 @@ namespace Final
             CollisionTimer.Interval = 100 / speed;
             CollisionTimer.Start();
             int speedMultiplier = speed;
+
         }
 
         void GameBoard_KeyDown(object sender, KeyEventArgs e)
@@ -141,11 +142,18 @@ namespace Final
                     Frog.Top = 453;
                     Frog.Left = 420;
                 }
+
+            }
+            if (frogLives == 0)
+            {
+                frogLives = 3;
+                EndScreen endScreen = new EndScreen();
+                this.Hide();
+                endScreen.ShowDialog();
+                this.Show();
             }
 
-
         }
-
 
     }
 }
