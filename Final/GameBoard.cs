@@ -43,8 +43,7 @@ namespace Final
 
             Frog.Location = new Point(x, y);
         }
-
-        private void MoveTimer_Tick(object sender, EventArgs e)
+        private void MoveTimer_Tick_1(object sender, EventArgs e)
         {
             Car1.Location = new Point(Car1.Location.X + 10, Car1.Location.Y);
             Car2.Location = new Point(Car2.Location.X - 10, Car2.Location.Y);
@@ -120,6 +119,7 @@ namespace Final
                 Frog.Top = 453;
                 Frog.Left = 420;
             }
+
             if (Frog.Bounds.IntersectsWith(River1.Bounds))
             {
                 if (Frog.Bounds.IntersectsWith(Log1.Bounds))
@@ -136,13 +136,12 @@ namespace Final
                     Frog.Top = 453;
                     Frog.Left = 420;
                 }
-                if (Frog.Bounds.IntersectsWith(endZone.Bounds))
-                {
-                    score = score + (1 * 100);
-                    Frog.Top = 453;
-                    Frog.Left = 420;
-                }
-
+            }
+            if (Frog.Bounds.IntersectsWith(endZone.Bounds))
+            {
+                score = score + (1 * 100);
+                Frog.Top = 453;
+                Frog.Left = 420;
             }
             if (frogLives == 0)
             {
@@ -152,8 +151,8 @@ namespace Final
                 endScreen.ShowDialog();
                 this.Show();
             }
-
         }
+
 
     }
 }
