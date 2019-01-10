@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameBoard));
-            this.MoveTimer = new System.Windows.Forms.Timer(this.components);
             this.Frog = new System.Windows.Forms.PictureBox();
             this.River1 = new System.Windows.Forms.PictureBox();
             this.Lane1 = new System.Windows.Forms.PictureBox();
@@ -92,13 +91,14 @@
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.Car5 = new System.Windows.Forms.PictureBox();
             this.Lane5End = new System.Windows.Forms.PictureBox();
-            this.CollisionTimer = new System.Windows.Forms.Timer(this.components);
             this.Log1 = new System.Windows.Forms.PictureBox();
             this.Log2 = new System.Windows.Forms.PictureBox();
             this.River1End = new System.Windows.Forms.PictureBox();
             this.River2End = new System.Windows.Forms.PictureBox();
             this.CountdownTimer = new System.Windows.Forms.Timer(this.components);
             this.endZone = new System.Windows.Forms.PictureBox();
+            this.CollisionTimer = new System.Windows.Forms.Timer(this.components);
+            this.MoveTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).BeginInit();
@@ -166,10 +166,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.River2End)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.endZone)).BeginInit();
             this.SuspendLayout();
-            // 
-            // MoveTimer
-            // 
-            this.MoveTimer.Tick += new System.EventHandler(this.MoveTimer_Tick);
             // 
             // Frog
             // 
@@ -780,10 +776,6 @@
             this.Lane5End.TabIndex = 63;
             this.Lane5End.TabStop = false;
             // 
-            // CollisionTimer
-            // 
-            this.CollisionTimer.Tick += new System.EventHandler(this.CollisionTimer_Tick);
-            // 
             // Log1
             // 
             this.Log1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Log1.BackgroundImage")));
@@ -835,6 +827,14 @@
             this.endZone.Size = new System.Drawing.Size(880, 29);
             this.endZone.TabIndex = 68;
             this.endZone.TabStop = false;
+            // 
+            // CollisionTimer
+            // 
+            this.CollisionTimer.Tick += new System.EventHandler(this.CollisionTimer_Tick);
+            // 
+            // MoveTimer
+            // 
+            this.MoveTimer.Tick += new System.EventHandler(this.MoveTimer_Tick_1);
             // 
             // GameBoard
             // 
@@ -981,7 +981,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer MoveTimer;
         private System.Windows.Forms.PictureBox Frog;
         private System.Windows.Forms.PictureBox River1;
         private System.Windows.Forms.PictureBox Lane1;
@@ -1043,13 +1042,14 @@
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.PictureBox Car5;
         private System.Windows.Forms.PictureBox Lane5End;
-        private System.Windows.Forms.Timer CollisionTimer;
         private System.Windows.Forms.PictureBox Log1;
         private System.Windows.Forms.PictureBox Log2;
         private System.Windows.Forms.PictureBox River1End;
         private System.Windows.Forms.PictureBox River2End;
         private System.Windows.Forms.Timer CountdownTimer;
         private System.Windows.Forms.PictureBox endZone;
+        private System.Windows.Forms.Timer CollisionTimer;
+        private System.Windows.Forms.Timer MoveTimer;
     }
 }
 

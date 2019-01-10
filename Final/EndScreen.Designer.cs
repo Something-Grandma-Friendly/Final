@@ -48,7 +48,7 @@
             this.playAgain.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playAgain.Location = new System.Drawing.Point(95, 35);
             this.playAgain.Name = "playAgain";
-            this.playAgain.Size = new System.Drawing.Size(75, 23);
+            this.playAgain.Size = new System.Drawing.Size(96, 23);
             this.playAgain.TabIndex = 2;
             this.playAgain.Text = "Play Again";
             this.playAgain.UseVisualStyleBackColor = true;
