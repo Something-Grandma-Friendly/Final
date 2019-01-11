@@ -99,6 +99,9 @@
             this.endZone = new System.Windows.Forms.PictureBox();
             this.CollisionTimer = new System.Windows.Forms.Timer(this.components);
             this.MoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.lblLives = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.RandomGenTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).BeginInit();
@@ -837,12 +840,38 @@
             // 
             this.MoveTimer.Tick += new System.EventHandler(this.MoveTimer_Tick_1);
             // 
+            // lblLives
+            // 
+            this.lblLives.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLives.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblLives.Location = new System.Drawing.Point(12, 6);
+            this.lblLives.Name = "lblLives";
+            this.lblLives.Size = new System.Drawing.Size(100, 23);
+            this.lblLives.TabIndex = 69;
+            this.lblLives.Text = "Lives : ";
+            // 
+            // lblScore
+            // 
+            this.lblScore.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblScore.Location = new System.Drawing.Point(724, 9);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(119, 20);
+            this.lblScore.TabIndex = 70;
+            this.lblScore.Text = "Score : ";
+            // 
+            // RandomGenTimer
+            // 
+            this.RandomGenTimer.Tick += new System.EventHandler(this.RandomGenTimer_Tick);
+            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(876, 518);
+            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.lblLives);
             this.Controls.Add(this.Lane5End);
             this.Controls.Add(this.Car5);
             this.Controls.Add(this.Car4);
@@ -1051,6 +1080,9 @@
         private System.Windows.Forms.PictureBox endZone;
         private System.Windows.Forms.Timer CollisionTimer;
         private System.Windows.Forms.Timer MoveTimer;
+        private System.Windows.Forms.Label lblLives;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Timer RandomGenTimer;
     }
 }
 
