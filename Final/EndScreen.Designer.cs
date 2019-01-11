@@ -33,12 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.btnScore = new System.Windows.Forms.Button();
-            this.lblScore1 = new System.Windows.Forms.Label();
-            this.lblScore2 = new System.Windows.Forms.Label();
-            this.lblScore3 = new System.Windows.Forms.Label();
-            this.lblScore4 = new System.Windows.Forms.Label();
-            this.lblScore5 = new System.Windows.Forms.Label();
-            this.txtLeaderboard = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnQuit
@@ -96,76 +92,26 @@
             this.btnScore.UseVisualStyleBackColor = true;
             this.btnScore.Click += new System.EventHandler(this.btnScore_Click);
             // 
-            // lblScore1
+            // listBox1
             // 
-            this.lblScore1.AutoSize = true;
-            this.lblScore1.Font = new System.Drawing.Font("Ravie", 15F);
-            this.lblScore1.ForeColor = System.Drawing.Color.Lime;
-            this.lblScore1.Location = new System.Drawing.Point(379, 223);
-            this.lblScore1.Name = "lblScore1";
-            this.lblScore1.Size = new System.Drawing.Size(27, 27);
-            this.lblScore1.TabIndex = 6;
-            this.lblScore1.Text = "0";
-            this.lblScore1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(57, 207);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 173);
+            this.listBox1.TabIndex = 6;
+            this.listBox1.Visible = false;
             // 
-            // lblScore2
+            // listBox2
             // 
-            this.lblScore2.AutoSize = true;
-            this.lblScore2.Font = new System.Drawing.Font("Ravie", 15F);
-            this.lblScore2.ForeColor = System.Drawing.Color.Lime;
-            this.lblScore2.Location = new System.Drawing.Point(379, 250);
-            this.lblScore2.Name = "lblScore2";
-            this.lblScore2.Size = new System.Drawing.Size(27, 27);
-            this.lblScore2.TabIndex = 7;
-            this.lblScore2.Text = "0";
-            this.lblScore2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore3
-            // 
-            this.lblScore3.AutoSize = true;
-            this.lblScore3.Font = new System.Drawing.Font("Ravie", 15F);
-            this.lblScore3.ForeColor = System.Drawing.Color.Lime;
-            this.lblScore3.Location = new System.Drawing.Point(379, 277);
-            this.lblScore3.Name = "lblScore3";
-            this.lblScore3.Size = new System.Drawing.Size(27, 27);
-            this.lblScore3.TabIndex = 8;
-            this.lblScore3.Text = "0";
-            this.lblScore3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore4
-            // 
-            this.lblScore4.AutoSize = true;
-            this.lblScore4.Font = new System.Drawing.Font("Ravie", 15F);
-            this.lblScore4.ForeColor = System.Drawing.Color.Lime;
-            this.lblScore4.Location = new System.Drawing.Point(379, 304);
-            this.lblScore4.Name = "lblScore4";
-            this.lblScore4.Size = new System.Drawing.Size(27, 27);
-            this.lblScore4.TabIndex = 9;
-            this.lblScore4.Text = "0";
-            this.lblScore4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore5
-            // 
-            this.lblScore5.AutoSize = true;
-            this.lblScore5.Font = new System.Drawing.Font("Ravie", 15F);
-            this.lblScore5.ForeColor = System.Drawing.Color.Lime;
-            this.lblScore5.Location = new System.Drawing.Point(379, 331);
-            this.lblScore5.Name = "lblScore5";
-            this.lblScore5.Size = new System.Drawing.Size(27, 27);
-            this.lblScore5.TabIndex = 10;
-            this.lblScore5.Text = "0";
-            this.lblScore5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtLeaderboard
-            // 
-            this.txtLeaderboard.AutoSize = true;
-            this.txtLeaderboard.Font = new System.Drawing.Font("Ravie", 15F);
-            this.txtLeaderboard.ForeColor = System.Drawing.Color.Lime;
-            this.txtLeaderboard.Location = new System.Drawing.Point(306, 196);
-            this.txtLeaderboard.Name = "txtLeaderboard";
-            this.txtLeaderboard.Size = new System.Drawing.Size(180, 27);
-            this.txtLeaderboard.TabIndex = 11;
-            this.txtLeaderboard.Text = "Leaderboard";
+            this.listBox2.BackColor = System.Drawing.SystemColors.InfoText;
+            this.listBox2.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox2.ForeColor = System.Drawing.Color.Chartreuse;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 17;
+            this.listBox2.Location = new System.Drawing.Point(337, 207);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 157);
+            this.listBox2.TabIndex = 7;
             // 
             // EndScreen
             // 
@@ -174,12 +120,8 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtLeaderboard);
-            this.Controls.Add(this.lblScore5);
-            this.Controls.Add(this.lblScore4);
-            this.Controls.Add(this.lblScore3);
-            this.Controls.Add(this.lblScore2);
-            this.Controls.Add(this.lblScore1);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnScore);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label1);
@@ -198,11 +140,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Button btnScore;
-        private System.Windows.Forms.Label lblScore1;
-        private System.Windows.Forms.Label lblScore2;
-        private System.Windows.Forms.Label lblScore3;
-        private System.Windows.Forms.Label lblScore4;
-        private System.Windows.Forms.Label lblScore5;
-        private System.Windows.Forms.Label txtLeaderboard;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
