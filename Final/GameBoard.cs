@@ -16,7 +16,10 @@ namespace Final
         public int score = 0;
 
         public int Speed;
+        public int speedMod = 1;
         public int scoreMod;
+
+        public bool hasBoosted = false;
 
         public GameBoard(int speed)                                                 // sets timer intervals and starts key click event handler
         {
@@ -25,11 +28,14 @@ namespace Final
 
             Speed = speed;
 
-            MoveTimer.Interval = 100 / speed;
+            MoveTimer.Interval = 100 / Speed;
             MoveTimer.Start();
 
-            CollisionTimer.Interval = 100 / speed;
+            CollisionTimer.Interval = 100 / Speed;
             CollisionTimer.Start();
+
+            RandomGenTimer.Interval = 2000;
+            RandomGenTimer.Start();
             
 
         }
@@ -159,13 +165,25 @@ namespace Final
                 this.Close();
                 endScreen.ShowDialog();
                 this.Show();
+                hasBoosted = false;
             }
         }
 
-        private void Car4_Click(object sender, EventArgs e)
+        private void RandomGenTimer_Tick(object sender, EventArgs e)
         {
-
+                while (hasBoosted == false)
+                {
+                    Random eventGenerator = new Random();
+                    int booster = eventGenerator.Next(1, 5);
+                    if (booster == 2)
+                    {
+                        Speed = Speed * 2;
+                        System.Threading.Thread.Sleep(5000);
+                        hasBoosted = true;
+                    }
+                }
         }
     }
 
 }
+
