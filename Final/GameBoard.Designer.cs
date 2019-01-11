@@ -638,7 +638,6 @@
             this.Car4.Size = new System.Drawing.Size(62, 35);
             this.Car4.TabIndex = 49;
             this.Car4.TabStop = false;
-            this.Car4.Click += new System.EventHandler(this.Car4_Click);
             // 
             // Lane4End
             // 
