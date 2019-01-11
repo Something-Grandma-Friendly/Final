@@ -15,23 +15,32 @@ namespace Final
         public int frogLives = 3;
         public int score = 0;
 
-        public int speed;
+        public int Speed;
+        public int speedMod = 1;
+        public int scoreMod;
 
-        public GameBoard(int speed)
+        public bool hasBoosted = false;
+
+        public GameBoard(int speed)                                                 // sets timer intervals and starts key click event handler
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(GameBoard_KeyDown);
 
-            MoveTimer.Interval = 100 / speed;
+            Speed = speed;
+
+            MoveTimer.Interval = 100 / Speed;
             MoveTimer.Start();
 
-            CollisionTimer.Interval = 100 / speed;
+            CollisionTimer.Interval = 100 / Speed;
             CollisionTimer.Start();
-            int speedMultiplier = speed;
+
+            RandomGenTimer.Interval = 2000;
+            RandomGenTimer.Start();
+            
 
         }
 
-        void GameBoard_KeyDown(object sender, KeyEventArgs e)
+        void GameBoard_KeyDown(object sender, KeyEventArgs e)                       //Moves frog based off of key click
         {
             int x = Frog.Location.X;
             int y = Frog.Location.Y;
@@ -43,7 +52,7 @@ namespace Final
 
             Frog.Location = new Point(x, y);
         }
-        private void MoveTimer_Tick_1(object sender, EventArgs e)
+        private void MoveTimer_Tick_1(object sender, EventArgs e)                   // moves obstacles and updates life and score text boxes
         {
             Car1.Location = new Point(Car1.Location.X + 10, Car1.Location.Y);
             Car2.Location = new Point(Car2.Location.X - 10, Car2.Location.Y);
@@ -53,11 +62,17 @@ namespace Final
 
             Log1.Location = new Point(Log1.Location.X + 10, Log1.Location.Y);
             Log2.Location = new Point(Log2.Location.X - 10, Log2.Location.Y);
+
+            lblLives.Text = "Lives : " + (frogLives - 1);
+            lblLives.Refresh();
+
+            lblScore.Text = "Score : " + score;
+            lblScore.Refresh();
         }
 
-        private void CollisionTimer_Tick(object sender, EventArgs e)
+        private void CollisionTimer_Tick(object sender, EventArgs e)                // Collisions
         {
-            if (Car1.Bounds.IntersectsWith(Lane1End.Bounds))
+            if (Car1.Bounds.IntersectsWith(Lane1End.Bounds))                        //Resets cars at end of road
             {
                 Car1.Left = 12;
             }
@@ -79,7 +94,7 @@ namespace Final
             }
 
 
-            if (Log1.Bounds.IntersectsWith(River1End.Bounds))
+            if (Log1.Bounds.IntersectsWith(River1End.Bounds))                       //resets logs at end of road
             {
                 Log1.Left = 12;
             }
@@ -89,7 +104,7 @@ namespace Final
             }
 
 
-            if (Frog.Bounds.IntersectsWith(Car1.Bounds))
+            if (Frog.Bounds.IntersectsWith(Car1.Bounds))                            //obstacle interactions with frogs. These cause death and position reset
             {
                 frogLives = frogLives - 1;
                 Frog.Top = 453;
@@ -120,9 +135,9 @@ namespace Final
                 Frog.Left = 420;
             }
 
-            if (Frog.Bounds.IntersectsWith(River1.Bounds))
+            if (Frog.Bounds.IntersectsWith(River1.Bounds))                              //This controls frog interactions with river
             {
-                if (Frog.Bounds.IntersectsWith(Log1.Bounds))
+                if (Frog.Bounds.IntersectsWith(Log1.Bounds))                            //If the frog is touching either log, it moves with the log
                 {
                     Frog.Location = new Point(Frog.Location.X + 10, Frog.Location.Y);
                 }
@@ -130,33 +145,45 @@ namespace Final
                 {
                     Frog.Location = new Point(Frog.Location.X - 10, Frog.Location.Y);
                 }
-                else
+                else                                                                    //If it contacts the river without touching a log, frog dies and position is reset
                 {
                     frogLives = frogLives - 1;
                     Frog.Top = 453;
                     Frog.Left = 420;
                 }
             }
-            if (Frog.Bounds.IntersectsWith(endZone.Bounds))
+            if (Frog.Bounds.IntersectsWith(endZone.Bounds))                             //When the frog reaches the end, this adds to the score and resets position
             {
-                score = score + (1 * 100);
+                score = score + (Speed * 100);
                 Frog.Top = 453;
                 Frog.Left = 420;
             }
-            if (frogLives == 0)
+            if (frogLives == 0)                                                         //When the frog is out of lives, this sends the user to the end screen
             {
                 frogLives = 3;
-                EndScreen endScreen = new EndScreen();
+                EndScreen endScreen = new EndScreen(score);
                 this.Close();
                 endScreen.ShowDialog();
                 this.Show();
+                hasBoosted = false;
             }
         }
 
-        private void Car4_Click(object sender, EventArgs e)
+        private void RandomGenTimer_Tick(object sender, EventArgs e)
         {
-
+                while (hasBoosted == false)
+                {
+                    Random eventGenerator = new Random();
+                    int booster = eventGenerator.Next(1, 5);
+                    if (booster == 2)
+                    {
+                        Speed = Speed * 2;
+                        System.Threading.Thread.Sleep(5000);
+                        hasBoosted = true;
+                    }
+                }
         }
     }
 
 }
+
