@@ -320,7 +320,7 @@
             // 
             this.Car1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Car1.BackgroundImage")));
             this.Car1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Car1.Location = new System.Drawing.Point(386, 397);
+            this.Car1.Location = new System.Drawing.Point(-3, 395);
             this.Car1.Name = "Car1";
             this.Car1.Size = new System.Drawing.Size(62, 35);
             this.Car1.TabIndex = 17;
@@ -630,7 +630,7 @@
             // 
             this.Car4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Car4.BackgroundImage")));
             this.Car4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Car4.Location = new System.Drawing.Point(551, 224);
+            this.Car4.Location = new System.Drawing.Point(815, 224);
             this.Car4.Name = "Car4";
             this.Car4.Size = new System.Drawing.Size(62, 35);
             this.Car4.TabIndex = 49;
@@ -761,7 +761,7 @@
             // 
             this.Car5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Car5.BackgroundImage")));
             this.Car5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Car5.Location = new System.Drawing.Point(181, 167);
+            this.Car5.Location = new System.Drawing.Point(-2, 167);
             this.Car5.Name = "Car5";
             this.Car5.Size = new System.Drawing.Size(62, 35);
             this.Car5.TabIndex = 62;
