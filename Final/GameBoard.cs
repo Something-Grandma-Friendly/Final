@@ -169,17 +169,17 @@ namespace Final
             }
         }
 
-        private void RandomGenTimer_Tick(object sender, EventArgs e)
+        private void RandomGenTimer_Tick(object sender, EventArgs e) // This method generates a random event
         {
-                while (hasBoosted == false)
+            int i = 0;
+            while (i == 0)                                           //This makes sure it only does it once per game
                 {
                     Random eventGenerator = new Random();
-                    int booster = eventGenerator.Next(1, 5);
+                    int booster = eventGenerator.Next(1, 10000000);
                     if (booster == 2)
                     {
-                        Speed = Speed * 2;
-                        System.Threading.Thread.Sleep(5000);
-                        hasBoosted = true;
+                        Speed = Speed * 2;                            // Doubles the speed
+                    System.Threading.Thread.Sleep(2000);
                     }
                 }
         }
