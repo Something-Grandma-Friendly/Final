@@ -13,20 +13,17 @@ namespace Final
 {
     public partial class EndScreen : Form
     {
-        public int Score;
-        public int[] scoreArray = new int[5];
 
         public EndScreen(int score)
         {
             InitializeComponent();
-            Score = score;
-            lblScore.Text = "Your score was : " + score;
+            lblScore.Text = "Your score was : " + score;                //This sets the score
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
             GameBoard gameBoard = new GameBoard(1);
-            StartScreen startScreen = new StartScreen();
+            StartScreen startScreen = new StartScreen();                //This closes all game boards
             gameBoard.Close();
             startScreen.Close();
             this.Close();
@@ -34,33 +31,9 @@ namespace Final
 
         private void playAgain_Click(object sender, EventArgs e)
         {
-            StartScreen startScreen = new StartScreen();
+            StartScreen startScreen = new StartScreen();                //This hides this screen and goes to the start screen to select difficulty
             this.Hide();
             startScreen.ShowDialog();
-        }
-
-        private void btnScore_Click(object sender, EventArgs e)
-        {
-            int counter = 0;
-            string line;
-
-            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\bc137128\Desktop\C#\Final\Final\Resources\NewScore.txt");
-            List<int> list = new List<int>();
-            TextWriter txt = new StreamWriter(@"C:\Users\bc137128\Desktop\C#\Final\Final\Resources\NewScore.txt");
-            txt.Write(Score);
-            while ((line = file.ReadLine()) != null  )
-            {
-                listBox1.Items.Add(line);
-                list.Add(int.Parse(line));
-                counter++;
-            }
-            int[] scoreArr = list.ToArray();
-            Array.Sort(scoreArr);
-            foreach(int item in scoreArr)
-            {
-
-                listBox2.Items.Add(item);
-            }
         }
     }
 }
