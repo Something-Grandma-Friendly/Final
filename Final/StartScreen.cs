@@ -20,16 +20,16 @@ namespace Final
             InitializeComponent();
         }
 
-        private void btnWeak_Click(object sender, EventArgs e)
+        private void btnWeak_Click(object sender, EventArgs e)                  //These buttons set difficulty. This is the easiest
         {
             speed = 1;
             GameBoard myForm = new GameBoard(speed);
             this.Close();
-            myForm.ShowDialog();
+            myForm.ShowDialog();                                                //These open the Gameboard form
             this.Show();
         }
 
-        private void btnRespectable_Click(object sender, EventArgs e)
+        private void btnRespectable_Click(object sender, EventArgs e)           //This is the medium difficulty
         {
             speed = 5;
             GameBoard myForm = new GameBoard(speed);
@@ -38,7 +38,7 @@ namespace Final
             this.Show();
         }
 
-        private void btnBeast_Click(object sender, EventArgs e)
+        private void btnBeast_Click(object sender, EventArgs e)                  //This is the hardest difficulty
         {
             speed = 10;
             GameBoard myForm = new GameBoard(speed);
