@@ -106,6 +106,7 @@
     <None Include="Resources\StartScreen1.jfif" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\ab.txt" />
     <Content Include="Resources\GameOver.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
