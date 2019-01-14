@@ -44,9 +44,9 @@ namespace Final
             int counter = 0;
             string line;
 
-            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\bc137128\Desktop\C#\Final\Final\bin\Debug\NewScore.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\bc137128\Desktop\C#\Final\Final\Resources\NewScore.txt");
             List<int> list = new List<int>();
-            TextWriter txt = new StreamWriter(@"C:\Users\bc137128\Desktop\C#\Final\Final\bin\Debug\NewScore.txt");
+            TextWriter txt = new StreamWriter(@"C:\Users\bc137128\Desktop\C#\Final\Final\Resources\NewScore.txt");
             txt.Write(Score);
             while ((line = file.ReadLine()) != null  )
             {
