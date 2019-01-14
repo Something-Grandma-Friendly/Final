@@ -103,6 +103,7 @@
     <None Include="Resources\Frog.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\NewScore.text" />
     <None Include="Resources\StartScreen1.jfif" />
   </ItemGroup>
   <ItemGroup>
