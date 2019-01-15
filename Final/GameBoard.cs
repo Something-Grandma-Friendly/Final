@@ -179,7 +179,7 @@ namespace Final
                     if (booster == 2)
                     {
                         Speed = Speed * 2;                            // Doubles the speed
-                    System.Threading.Thread.Sleep(2000);
+                        i = 1;
                     }
                 }
         }
