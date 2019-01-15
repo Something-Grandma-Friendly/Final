@@ -101,7 +101,6 @@
             this.MoveTimer = new System.Windows.Forms.Timer(this.components);
             this.lblLives = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            this.RandomGenTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).BeginInit();
@@ -323,7 +322,7 @@
             // 
             this.Car1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Car1.BackgroundImage")));
             this.Car1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Car1.Location = new System.Drawing.Point(386, 397);
+            this.Car1.Location = new System.Drawing.Point(356, 397);
             this.Car1.Name = "Car1";
             this.Car1.Size = new System.Drawing.Size(62, 35);
             this.Car1.TabIndex = 17;
@@ -633,7 +632,7 @@
             // 
             this.Car4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Car4.BackgroundImage")));
             this.Car4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Car4.Location = new System.Drawing.Point(551, 224);
+            this.Car4.Location = new System.Drawing.Point(581, 224);
             this.Car4.Name = "Car4";
             this.Car4.Size = new System.Drawing.Size(62, 35);
             this.Car4.TabIndex = 49;
@@ -763,7 +762,7 @@
             // 
             this.Car5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Car5.BackgroundImage")));
             this.Car5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Car5.Location = new System.Drawing.Point(181, 167);
+            this.Car5.Location = new System.Drawing.Point(179, 167);
             this.Car5.Name = "Car5";
             this.Car5.Size = new System.Drawing.Size(62, 35);
             this.Car5.TabIndex = 62;
@@ -859,14 +858,11 @@
             this.lblScore.TabIndex = 70;
             this.lblScore.Text = "Score : ";
             // 
-            // RandomGenTimer
-            // 
-            this.RandomGenTimer.Tick += new System.EventHandler(this.RandomGenTimer_Tick);
-            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(876, 518);
             this.Controls.Add(this.lblScore);
@@ -938,7 +934,8 @@
             this.Controls.Add(this.River1);
             this.Controls.Add(this.endZone);
             this.Name = "GameBoard";
-            this.Text = "Form1";
+            this.Text = "GameBoard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).EndInit();
@@ -1081,7 +1078,6 @@
         private System.Windows.Forms.Timer MoveTimer;
         private System.Windows.Forms.Label lblLives;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Timer RandomGenTimer;
     }
 }
 

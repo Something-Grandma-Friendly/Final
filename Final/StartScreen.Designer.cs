@@ -97,6 +97,7 @@
             this.Controls.Add(this.btnWeak);
             this.Name = "StartScreen";
             this.Text = "StartScreen";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

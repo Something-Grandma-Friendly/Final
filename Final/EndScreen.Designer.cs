@@ -91,6 +91,7 @@
             this.Controls.Add(this.btnQuit);
             this.Name = "EndScreen";
             this.Text = "EndScreen";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

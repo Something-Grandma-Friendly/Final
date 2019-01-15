@@ -16,8 +16,6 @@ namespace Final
         public int score = 0;
 
         public int Speed;
-        public int speedMod = 1;
-        public int scoreMod;
 
         public bool hasBoosted = false;
 
@@ -28,14 +26,11 @@ namespace Final
 
             Speed = speed;
 
-            MoveTimer.Interval = 100 / Speed;
+            MoveTimer.Interval = 100 / speed;
             MoveTimer.Start();
 
-            CollisionTimer.Interval = 100 / Speed;
+            CollisionTimer.Interval = 100 / speed;
             CollisionTimer.Start();
-
-            RandomGenTimer.Interval = 2000;
-            RandomGenTimer.Start();
             
 
         }
@@ -167,21 +162,16 @@ namespace Final
                 this.Show();
                 hasBoosted = false;
             }
-        }
-
-        private void RandomGenTimer_Tick(object sender, EventArgs e) // This method generates a random event
-        {
-            int i = 0;
-            while (i == 0)                                           //This makes sure it only does it once per game
+            while (hasBoosted == false)                                           //This makes sure it only does it once per game
+            {
+                Random eventGenerator = new Random();
+                int booster = eventGenerator.Next(1, 5);
+                if (booster == 2)
                 {
-                    Random eventGenerator = new Random();
-                    int booster = eventGenerator.Next(1, 10000000);
-                    if (booster == 2)
-                    {
-                        Speed = Speed * 2;                            // Doubles the speed
-                        i = 1;
-                    }
+                    Speed = Speed * 2;                            // Doubles the speed
                 }
+                hasBoosted = true;
+            }
         }
     }
 
