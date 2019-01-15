@@ -861,7 +861,6 @@
             // 
             // RandomGenTimer
             // 
-            this.RandomGenTimer.Tick += new System.EventHandler(this.RandomGenTimer_Tick);
             // 
             // GameBoard
             // 
