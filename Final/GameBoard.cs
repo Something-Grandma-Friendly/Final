@@ -179,7 +179,7 @@ namespace Final
                     if (booster == 2)
                     {
                         Speed = Speed * 2;                            // Doubles the speed
-                    i = 1;
+                        i = 1;
                     }
                 }
         }
