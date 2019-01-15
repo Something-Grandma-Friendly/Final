@@ -12,3 +12,6 @@ The controls are simple. You use the arrow keys to control the frog. After selec
 <h3> Flowchart </h3>
 <img src = "Flowchart.PNG">
 <hr>
+
+<h3> Our Video </h3>
+<a href ="https://youtu.be/8fz-1cOmTpg">My video is here</a>
