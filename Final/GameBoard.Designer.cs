@@ -101,7 +101,6 @@
             this.MoveTimer = new System.Windows.Forms.Timer(this.components);
             this.lblLives = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            this.RandomGenTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.River1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lane1)).BeginInit();
@@ -859,9 +858,6 @@
             this.lblScore.TabIndex = 70;
             this.lblScore.Text = "Score : ";
             // 
-            // RandomGenTimer
-            // 
-            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1080,7 +1076,6 @@
         private System.Windows.Forms.Timer MoveTimer;
         private System.Windows.Forms.Label lblLives;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Timer RandomGenTimer;
     }
 }
 

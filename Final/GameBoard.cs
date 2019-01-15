@@ -16,7 +16,6 @@ namespace Final
         public int score = 0;
 
         public int Speed;
-        public int speedMod = 1;
 
         public bool hasBoosted = false;
 
@@ -32,9 +31,6 @@ namespace Final
 
             CollisionTimer.Interval = 100 / speed;
             CollisionTimer.Start();
-
-            RandomGenTimer.Interval = 10000;
-            RandomGenTimer.Start();
             
 
         }
